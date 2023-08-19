@@ -1,0 +1,29 @@
+@server = https://organic-engine-w6rrgpvg4x5295gv-8080.app.github.dev
+@varitas = {{server}}/api/varitas
+@magos = {{server}}/api/magos
+###
+GET {{varitas}}/1
+###
+POST {{varitas}}
+Content-Type: application/json
+
+{
+  "nombre" : "Alamo"
+}
+###
+GET {{magos}}
+###
+GET {{magos}}/1
+###
+PATCH {{magos}}/1
+Content-Type: application/json
+
+{
+  "nombre" : "Ema Mesias"
+}
+###
+GET {{server}}/api/casas/1
+###
+GET {{server}}/api/alumnos
+###
+GET {{server}}/api/casas/1/formacion
